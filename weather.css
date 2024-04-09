@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./w_app/purple.sky.jpg);
+    /* background-color: bisque; */
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+.weatherapp{
+
+    background-color: rgba(255, 255, 255, 0.284);
+    max-width: 500px;
+    /* max-width: 100%; */
+
+    margin: 50px auto;
+    padding: 30px;
+    /* border-radius: 50px; */
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.search-form{
+    display: flex;
+    align-items: center;
+}
+input[type='text']{
+    flex: 1;
+    padding: 13px;
+    border: 2px solid;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+.search-btn{
+    background-color:grey ;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+}
+.search-btn:hover{
+    background-color: rgba(128, 128, 128, 0.236);
+}
+.city-date-section{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 2px; */
+}
+.a3{display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
+}
+.a1{ display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;}
+.city-date-section .city{
+    font-size: 4rem;
+    opacity: 0.9;
+}
+.city-date-section .date{
+    /* background-color: #c3eaf4; */
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+.temperature-info{
+    /* margin-top: 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+.a2{ display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;}
+.temperature-info .temp-details .temp{
+    font-size: 5rem;
+}
+.temperature-info .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.temperature-info .main i{
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+.temperature-info .main span{
+    font-size: 1.5rem;
+}
+.extra-info{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.feels-like-info, .sun-set-info, .sun-rise-info{
+    background-color: #ecf0f151;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    padding:5px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.additional-info{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.wind-info, .humidity-info, .pressure-info{
+    background-color: #ecf0f14f;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.additional-info .ic{
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.wind-info,.humidity-info,.pressure-info{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .weatherapp {
+        margin: 20px auto; /* Adjust margin for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .search-form {
+        flex-direction: row; /* Stack form elements vertically */
+        align-items: stretch; /* Stretch input and button to full width */
+    }
+
+    
+    .temperature-info .temp {
+        font-size: 3.5rem; /* Decrease font size for temperature */
+    }
+
+    .extra-info, .additional-info {
+        flex-wrap: wrap; /* Wrap extra info items on smaller screens */
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .extra-info > *, .additional-info > * {
+        margin: 10px; /* Add spacing between items */
+    }
+
+    .feels-like-info, .sun-set-info, .sun-rise-info, .wind-info, .humidity-info, .pressure-info {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
